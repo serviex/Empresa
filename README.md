@@ -9,3 +9,7 @@ Correo: david16baena@gmail.com
 
 Nombre: Edwin Alexander Pabon
 Correo: eapabon32@gmail.com
+
+Nombre: Milton Peña
+Correo: milton.desing@gmail.com
+Rol: Front End
