@@ -1,4 +1,17 @@
 # Empresa
+
+## Table of contents
+* [General info](#general-info)
+* [Tecnologias](#Tecnologias)
+* [Integrantes](#Integrantes)
+
+## General info
+Este proyecto es para la materia de desarrollo de sofware
+	
+## Tecnologias
+Project is created with:
+* Java: 8
+## Integrantes
 Integrantes:
 
 Nombre: Juan David Marín Jiménez 
