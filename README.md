@@ -30,7 +30,12 @@ Nombre: Milton Peña
 Correo: milton.desing@gmail.com
 Rol: Front End
 
+Nombre: Luzamy Pacheco Hoyos
+Correo: lupahoo@gmail.com
+Rol: Back End
+
 ## Calendario
 El proyecto tiene el siquiente calendario
 https://calendar.google.com/calendar/u/0?cid=MnFxbTl0YzgxdnUxa3BlYnU5cmM1NTQwbm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 o descagar el archivo adjunto calendario.ics
+
