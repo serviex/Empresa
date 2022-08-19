@@ -13,3 +13,7 @@ Correo: eapabon32@gmail.com
 Nombre: Milton Peña
 Correo: milton.desing@gmail.com
 Rol: Front End
+
+Nombre: Luzamy Pacheco Hoyos
+Correo: lupahoo@gmail.com
+Rol: Back End
