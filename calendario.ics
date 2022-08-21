@@ -1,0 +1,172 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Serviex
+X-WR-TIMEZONE:America/Bogota
+X-WR-CALDESC:reuniones 
+BEGIN:VTIMEZONE
+TZID:America/Bogota
+X-LIC-LOCATION:America/Bogota
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0500
+TZNAME:-05
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220817T180000
+DTEND;TZID=America/Bogota:20220817T190000
+RRULE:FREQ=WEEKLY;UNTIL=20220926T045959Z;BYDAY=FR,MO,TH,TU,WE
+DTSTAMP:20220818T132509Z
+UID:196upe0mpaut7148gd6dibk9o5@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/dqh-qvvy-tvr
+CLASS:PUBLIC
+CREATED:20220818T012143Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/dqh-qvvy-tvr\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T013356Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dayly
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220822T070000
+DTEND;TZID=America/Bogota:20220822T080000
+RRULE:FREQ=WEEKLY;UNTIL=20220926T045959Z;BYDAY=MO
+EXDATE;TZID=America/Bogota:20220829T070000
+EXDATE;TZID=America/Bogota:20220919T070000
+DTSTAMP:20220818T132509Z
+UID:7o99a5cltj3l62252dvhpu2ksg@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/wdt-ioca-ngo
+CLASS:PUBLIC
+CREATED:20220818T013558Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/wdt-ioca-ngo\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T013643Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sprint Planning
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220821T210000
+DTEND;TZID=America/Bogota:20220821T220000
+RRULE:FREQ=WEEKLY;UNTIL=20220828T045959Z;BYDAY=SU
+DTSTAMP:20220818T132509Z
+UID:10hldn9qebceni12taia5liq5r@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/pyq-fywg-hrd
+CLASS:PUBLIC
+CREATED:20220818T014027Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/pyq-fywg-hrd\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T131826Z
+LOCATION:
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Sprint retrospective
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220821T200000
+DTEND;TZID=America/Bogota:20220821T210000
+RRULE:FREQ=WEEKLY;UNTIL=20221002T045959Z;BYDAY=SU
+EXDATE;TZID=America/Bogota:20220904T200000
+EXDATE;TZID=America/Bogota:20220918T200000
+DTSTAMP:20220818T132509Z
+UID:3ofdeg4uv6i7hlbthijs1o0h6f@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/ycz-zyku-oqk
+CLASS:PUBLIC
+CREATED:20220818T013913Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/ycz-zyku-oqk\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T132004Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Sprint Review
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220828T210000
+DTEND;TZID=America/Bogota:20220828T220000
+RRULE:FREQ=WEEKLY;UNTIL=20221002T045959Z;BYDAY=SU
+EXDATE;TZID=America/Bogota:20220904T210000
+EXDATE;TZID=America/Bogota:20220918T210000
+DTSTAMP:20220818T132509Z
+UID:ui6nbgo2a5uksl3h8fhfisboqs@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/pyq-fywg-hrd
+CLASS:PUBLIC
+CREATED:20220818T014027Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/pyq-fywg-hrd\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T132012Z
+LOCATION:
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Sprint retrospective
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220828T200000
+DTEND;TZID=America/Bogota:20220828T210000
+DTSTAMP:20220818T132509Z
+UID:3ofdeg4uv6i7hlbthijs1o0h6f@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/ycz-zyku-oqk
+RECURRENCE-ID;TZID=America/Bogota:20220828T200000
+CLASS:PUBLIC
+CREATED:20220818T013913Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/ycz-zyku-oqk\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T132159Z
+LOCATION:
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:Sprint Review
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Bogota:20220829T070000
+DTEND;TZID=America/Bogota:20220829T080000
+DTSTAMP:20220818T132509Z
+UID:7o99a5cltj3l62252dvhpu2ksg@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/wdt-ioca-ngo
+RECURRENCE-ID;TZID=America/Bogota:20220905T070000
+CLASS:PUBLIC
+CREATED:20220818T013558Z
+DESCRIPTION:-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~::~:~::-\nThis event has a video call.\nJoin: https://meet.
+ google.com/wdt-ioca-ngo\n\nDo not edit this section of the description.\n-:
+ :~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~::~:~::-
+LAST-MODIFIED:20220818T132235Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Sprint Planning
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
