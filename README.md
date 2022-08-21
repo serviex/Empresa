@@ -10,7 +10,7 @@ Este proyecto es para la materia de desarrollo de sofware
 	
 ## Tecnologias
 El proyecto esta creado con:
-* Java: 8
+* Java: 17
 ## Integrantes
 Integrantes:
 
