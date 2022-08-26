@@ -17,7 +17,7 @@ public class Enterprice {
     private LocalDate updateAt;
     private User[] user;
     //MÉTODOS
-    public Enterprice(Long id, String document,String phone,String address, LocalDate createAt,
+    public Enterprice(Long id, String name, String document,String phone,String address, LocalDate createAt,
                       LocalDate updateAt, User[] user) {
         setId(id);
         setDocument(document);
@@ -26,6 +26,7 @@ public class Enterprice {
         setCreateAt(createAt);
         setUpdateAt(updateAt);
         setUser(user);
+        setName(name);
     }
     public Long getId() {
         return id;
