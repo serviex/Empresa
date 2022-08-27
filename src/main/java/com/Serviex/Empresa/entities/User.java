@@ -1,17 +1,31 @@
 package com.Serviex.Empresa.entities;
+import java.time.LocalDate;
 
 public class User {
+    //ATRIBUTOS
     private Long id;
-
     private String email;
-
+    private String name;
+    private Role role;
+    private Enterprice enterprice;
+    private LocalDate createAt;
+    private LocalDate updateAt;
     private String authOId;
 
-    public User(Long id,String email,String authOId){
-        setEmail(email);
+    //MÉTODOS
+    public User(Long id, String email, String name, Role role,
+                LocalDate createAt, LocalDate updateAt,
+                Enterprice enterprice, String authOId) {
         setId(id);
+        setEmail(email);
+        setName(name);
+        setRole(role);
+        setEnterprice(enterprice);
+        setCreateAt(createAt);
+        setUpdateAt(updateAt);
         setAuthOId(authOId);
     }
+
     public Long getId() {
         return id;
     }
@@ -28,6 +42,38 @@ public class User {
         this.email = email;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public LocalDate getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalDate createAt) {
+        this.createAt = createAt;
+    }
+
+    public LocalDate getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(LocalDate updateAt) {
+        this.updateAt = updateAt;
+    }
+
     public String getAuthOId() {
         return authOId;
     }
@@ -36,4 +82,11 @@ public class User {
         this.authOId = authOId;
     }
 
+    public Enterprice getEnterprice() {
+        return enterprice;
+    }
+
+    public void setEnterprice(Enterprice enterprice) {
+        this.enterprice = enterprice;
+    }
 }

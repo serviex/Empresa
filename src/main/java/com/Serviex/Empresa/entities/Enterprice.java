@@ -15,17 +15,15 @@ public class Enterprice {
     private String address;
     private LocalDate createAt;
     private LocalDate updateAt;
-    private User[] user;
     //MÉTODOS
     public Enterprice(Long id, String name, String document,String phone,String address, LocalDate createAt,
-                      LocalDate updateAt, User[] user) {
+                      LocalDate updateAt) {
         setId(id);
         setDocument(document);
         setPhone(phone);
         setAddress(address);
         setCreateAt(createAt);
         setUpdateAt(updateAt);
-        setUser(user);
         setName(name);
     }
     public Long getId() {
@@ -83,13 +81,4 @@ public class Enterprice {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    public User[] getUser() {
-        return user;
-    }
-
-    public void setUser(User[] user) {
-        this.user = user;
-    }
-
 }
