@@ -29,7 +29,7 @@ public class EmpresaApplication {
         enterprice.setPhone("6666");
         System.out.println("set phone:"+ enterprice.getPhone());
         System.out.println("address:"+ enterprice.getAddress());
-        enterprice.setDocument("Carrera false 123");
+        enterprice.setAddress("Carrera false 123");
         System.out.println("set address:"+ enterprice.getAddress());
         System.out.println("updateAt:"+ enterprice.getUpdateAt());
         System.out.println("createAt:"+ enterprice.getCreateAt());
