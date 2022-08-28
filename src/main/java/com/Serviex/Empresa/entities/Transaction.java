@@ -10,10 +10,10 @@ public class Transaction {
     private Float amount;
     private LocalDate createAt;
     private LocalDate updateAt;
-    private User user;
+    private Employee user;
     //MÉTODOS
     public Transaction(Long id, String concept,Float amount, LocalDate createAt,
-                      LocalDate updateAt, User user) {
+                      LocalDate updateAt, Employee user) {
         setId(id);
         setConcept(concept);
         setAmount(amount);
@@ -61,11 +61,11 @@ public class Transaction {
         this.updateAt = updateAt;
     }
 
-    public User getUser() {
+    public Employee getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Employee user) {
         this.user = user;
     }
 
