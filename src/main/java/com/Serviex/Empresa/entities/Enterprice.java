@@ -2,6 +2,7 @@ package com.Serviex.Empresa.entities;
 
 import java.time.LocalDate;
 
+
 public class Enterprice {
 
     //ATRIBUTOS
