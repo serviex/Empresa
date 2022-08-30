@@ -9,12 +9,12 @@ import com.Serviex.Empresa.entities.Transaction;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class EmpresaApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(EmpresaApplication.class, args);
-        Enterprice enterprice_alt= new Enterprice((long)1, "Competencia de Lagobo",
+		SpringApplication.run(EmpresaApplication.class, args);
+        /*Enterprice enterprice_alt= new Enterprice((long)1, "Competencia de Lagobo",
                 "6666","2333","carrera falsa",
                 LocalDate.of(2022,8,24),
                 LocalDate.of(2022,8,24));
@@ -70,7 +70,7 @@ public class EmpresaApplication {
         System.out.println("set amount:"+ transaction.getAmount());
         System.out.println("updateAt:"+ transaction.getUpdateAt());
         System.out.println("createAt:"+ transaction.getCreateAt());
-        System.out.println("user:"+ transaction.getUser().getEmail().toString());
+        System.out.println("user:"+ transaction.getUser().getEmail().toString());*/
 	}
 
 }
