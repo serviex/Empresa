@@ -26,7 +26,11 @@ public class EnterpriceController {
     }
     @PutMapping("/Enterprice/{id}")
     public Enterprice setEnterprice(@RequestBody Enterprice enterprice, @PathVariable Long id) {
-        this.enterprice =enterprice;
+        if(this.enterprice.getId()== id)
+        {
+            this.enterprice =enterprice;
+            return enterprice;
+        }
         return enterprice;
     }
 }
