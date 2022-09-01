@@ -1,25 +1,44 @@
 package com.Serviex.Empresa.entities;
 
-import java.time.LocalDate;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.time.LocalDate;
+import java.time.LocalDate;
+import javax.persistence.*;
+import java.util.List;
+@Entity
+@Table(name = "transaction")
+@JsonIgnoreProperties({"employee"})
 public class Transaction {
 
     //ATRIBUTOS
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "transaction_id")
     private Long id;
+    @Column(name = "concept")
     private String concept;
+    @Column(name = "amount")
     private Float amount;
+    @Column(name = "createAt")
     private LocalDate createAt;
+    @Column(name = "updateAt")
     private LocalDate updateAt;
-    private Employee user;
+    @ManyToOne(fetch = FetchType.LAZY,
+            targetEntity = Employee.class)
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
     //MÉTODOS
+    public Transaction(){
+
+    }
     public Transaction(Long id, String concept,Float amount, LocalDate createAt,
-                      LocalDate updateAt, Employee user) {
+                      LocalDate updateAt) {
         setId(id);
         setConcept(concept);
         setAmount(amount);
         setCreateAt(createAt);
         setUpdateAt(updateAt);
-        setUser(user);
     }
     public Long getId() {
         return id;
@@ -62,11 +81,11 @@ public class Transaction {
     }
 
     public Employee getUser() {
-        return user;
+        return employee;
     }
 
     public void setUser(Employee user) {
-        this.user = user;
+        this.employee = user;
     }
 
 

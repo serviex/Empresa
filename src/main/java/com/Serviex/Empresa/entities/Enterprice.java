@@ -1,22 +1,36 @@
 package com.Serviex.Empresa.entities;
 
 import java.time.LocalDate;
-
-
+import javax.persistence.*;
+import java.util.List;
+@Entity
+@Table(name = "enterprice")
 public class Enterprice {
-
     //ATRIBUTOS
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "enterprice_id")
     private Long id;
-
+    @Column(name = "name")
     private String name;
-
+    @Column(name = "document")
     private String document;
-
+    @Column(name = "phone")
     private String phone;
+    @Column(name = "address")
     private String address;
+    @Column(name = "createAt")
     private LocalDate createAt;
+    @Column(name = "updateAt")
     private LocalDate updateAt;
+
+    @OneToMany(mappedBy = "enterprice", cascade = CascadeType.ALL)
+
+    private List<Employee> employees;
+
     //MÉTODOS
+    public Enterprice() {
+    }
     public Enterprice(Long id, String name, String document,String phone,String address, LocalDate createAt,
                       LocalDate updateAt) {
         setId(id);
@@ -81,5 +95,19 @@ public class Enterprice {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void addEmployee(Employee employee){
+        this.employees.add(employee);
+        employee.setEnterprice(this);
+    }
+
+    public void removeEmployee(Employee employee){
+        this.employees.remove(employee);
+        employee.setEnterprice(null);
     }
 }
