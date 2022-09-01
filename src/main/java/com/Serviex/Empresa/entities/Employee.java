@@ -1,29 +1,51 @@
 package com.Serviex.Empresa.entities;
 
+import com.Serviex.Empresa.entities.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.time.LocalDate;
-
+import javax.persistence.*;
+import java.util.List;
+@Entity
+@Table(name = "employee")
+@JsonIgnoreProperties({"enterprice"})
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "employee_id")
     private Long id;
+    @Column(name = "email")
     private String email;
+    @Column(name = "name")
     private String name;
+    @Enumerated(EnumType.STRING)
+    @Column(name="role")
     private Role role;
+    @ManyToOne(fetch = FetchType.LAZY,
+            targetEntity = Enterprice.class)
+    @JoinColumn(name = "enterprice_id")
     private Enterprice enterprice;
+    @Column(name = "createAt")
     private LocalDate createAt;
+    @Column(name = "updateAt")
     private LocalDate updateAt;
-    private String authOId;
 
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+
+    private List<Transaction> transactions;
     //MÉTODOS
+    public Employee(){
+
+    }
     public Employee(Long id, String email, String name, Role role,
-                LocalDate createAt, LocalDate updateAt,
-                Enterprice enterprice, String authOId) {
+                LocalDate createAt, LocalDate updateAt) {
         setId(id);
         setEmail(email);
         setName(name);
         setRole(role);
-        setEnterprice(enterprice);
         setCreateAt(createAt);
         setUpdateAt(updateAt);
-        setAuthOId(authOId);
+
     }
 
     public Long getId() {
@@ -74,13 +96,6 @@ public class Employee {
         this.updateAt = updateAt;
     }
 
-    public String getAuthOId() {
-        return authOId;
-    }
-
-    public void setAuthOId(String authOId) {
-        this.authOId = authOId;
-    }
 
     public Enterprice getEnterprice() {
         return enterprice;
@@ -88,5 +103,18 @@ public class Employee {
 
     public void setEnterprice(Enterprice enterprice) {
         this.enterprice = enterprice;
+    }
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void addTransaction(Transaction transaction){
+        this.transactions.add(transaction);
+        transaction.setUser(this);
+    }
+
+    public void removeTransaction(Transaction transaction){
+        this.transactions.remove(transaction);
+        transaction.setUser(null);
     }
 }
