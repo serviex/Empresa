@@ -1,36 +1,38 @@
 package com.Serviex.Empresa.controllers;
 
 import com.Serviex.Empresa.entities.Enterprice;
+import com.Serviex.Empresa.services.EnterpriceService;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 public class EnterpriceController {
-    private Enterprice enterprice;
+    private EnterpriceService service;
 
-    EnterpriceController() {
-        this.enterprice = new Enterprice((long)1, "Competencia de Lagobo",
-                "6666","2333","carrera falsa",
-                LocalDate.of(2022,8,24),
-                LocalDate.of(2022,8,24));
+    EnterpriceController(EnterpriceService service) {
+        this.service = service;
     }
     @GetMapping("/Enterprice")
-    public Enterprice getEnterprice() {
-        return enterprice;
+    public List<Enterprice> getEnterprices() {
+        return this.service.getEnterprices();
+    }
+    @GetMapping("/Enterprice/{id}")
+    public Enterprice getEnterprice(@PathVariable("id") long id) {
+        return this.service.getEnterprice(id);
     }
     @PostMapping("/Enterprice")
     public Enterprice createEnterprice(@RequestBody Enterprice enterprice) {
-        this.enterprice =enterprice;
-        return this.enterprice;
+        return this.service.createEnterprice(enterprice);
     }
     @PutMapping("/Enterprice/{id}")
-    public Enterprice setEnterprice(@RequestBody Enterprice enterprice, @PathVariable Long id) {
-        if(this.enterprice.getId()== id)
-        {
-            this.enterprice =enterprice;
-            return enterprice;
-        }
-        return enterprice;
+    public Enterprice setEnterprice(@RequestBody Enterprice enterprice, @PathVariable("id") long id) {
+        return this.service.updateEnterprice(id, enterprice);
+    }
+
+    @DeleteMapping("/Enterprice/{id}")
+    public Boolean deleteEnterprice(@PathVariable("id") long id){
+        return this.service.deleteEnterprice(id);
     }
 }
