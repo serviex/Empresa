@@ -1,6 +1,8 @@
 package com.Serviex.Empresa.services;
 
 import com.Serviex.Empresa.entities.Employee;
+import com.Serviex.Empresa.entities.Enterprice;
+import com.Serviex.Empresa.entities.Transaction;
 import com.Serviex.Empresa.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +43,12 @@ public class EmployeeService {
         }
 
         return null;
+    }
+    public Employee createEnterprice(Enterprice enterprice, long id){
+        Employee employee = this.getEmployee(id);
+        employee.setCreateAt(LocalDate.now());
+        employee.setEnterprice(enterprice);
+        return this.employeeRepository.save(employee);
     }
 
     public Boolean deleteEmployee(Long id){
