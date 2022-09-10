@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 @Entity
 @Table(name = "transaction")
-@JsonIgnoreProperties({"employee"})
+@JsonIgnoreProperties({"employee","entreprice"})
 public class Transaction {
 
     //ATRIBUTOS
@@ -28,6 +28,11 @@ public class Transaction {
             targetEntity = Employee.class)
     @JoinColumn(name = "employee_id")
     private Employee employee;
+
+    @ManyToOne(fetch = FetchType.LAZY,
+            targetEntity = Enterprice.class)
+    @JoinColumn(name = "entreprice_id")
+    private Enterprice entreprice;
     //MÉTODOS
     public Transaction(){
 
@@ -88,5 +93,11 @@ public class Transaction {
         this.employee = user;
     }
 
+    public Enterprice getEntreprice() {
+        return entreprice;
+    }
 
+    public void setEnterprice(Enterprice entreprice) {
+        this.entreprice = entreprice;
+    }
 }

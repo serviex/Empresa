@@ -3,8 +3,9 @@ package com.Serviex.Empresa.entities;
 import com.Serviex.Empresa.entities.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.time.LocalDate;
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name = "employee")
@@ -30,7 +31,7 @@ public class Employee {
     @Column(name = "updateAt")
     private LocalDate updateAt;
 
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
 
     private List<Transaction> transactions;
     //MÉTODOS
@@ -109,6 +110,8 @@ public class Employee {
     }
 
     public void addTransaction(Transaction transaction){
+        if (transactions == null)
+            transactions = new ArrayList<>();
         this.transactions.add(transaction);
         transaction.setUser(this);
     }

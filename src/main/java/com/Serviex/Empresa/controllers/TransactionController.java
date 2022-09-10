@@ -1,36 +1,41 @@
 package com.Serviex.Empresa.controllers;
-import com.Serviex.Empresa.entities.Enterprice;
+
 import com.Serviex.Empresa.entities.Transaction;
+import com.Serviex.Empresa.services.TransactionService;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @RestController
 public class TransactionController {
     private Transaction transaction;
 
-    TransactionController() {
-        this.transaction =
-                new Transaction((long)1,"compra pan",(float)1000,
-                LocalDate.of(2022,8,24),
-                LocalDate.of(2022,8,24));
+    private TransactionService service;
+
+    TransactionController(TransactionService service) {
+        this.service = service;
     }
     @GetMapping("/Transaction")
-    public Transaction getTransaction() {
-        return transaction;
+    public List<Transaction> getTransaction() {
+        return this.service.getTransactions();
+    }
+    @GetMapping("/Transaction/{id}")
+    public Transaction getTransaction(@PathVariable("id") long id) {
+        return this.service.getTransaction(id);
     }
     @PostMapping("/Transaction")
     public Transaction createTransaction(@RequestBody Transaction transaction) {
-        this.transaction =transaction;
-        return this.transaction;
+        return this.service.createTransaction(transaction);
     }
     @PutMapping("/Transaction/{id}")
-    public Transaction setTransaction(@RequestBody Transaction transaction, @PathVariable Long id) {
-        if(this.transaction.getId()== id)
-        {
-            this.transaction =transaction;
-            return transaction;
-        }
-        return transaction;
+    public Transaction setEnterprice(@RequestBody Transaction transaction, @PathVariable("id") long id) {
+        return this.service.updateTransaction(id, transaction);
     }
+
+    @DeleteMapping("/Transaction/{id}")
+    public Boolean deleteTransaction(@PathVariable("id") long id){
+        return this.service.deleteTransaction(id);
+    }
+
 }
