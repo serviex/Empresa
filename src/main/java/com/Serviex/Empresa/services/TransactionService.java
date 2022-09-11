@@ -35,7 +35,6 @@ public class TransactionService {
 
         if(dbData.isPresent()){
             Transaction e = dbData.get();
-            e.setId(transaction.getId());
             e.setAmount(transaction.getAmount());
             e.setConcept(transaction.getConcept());
             e.setUpdateAt(LocalDate.now());

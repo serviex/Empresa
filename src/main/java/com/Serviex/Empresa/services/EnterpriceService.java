@@ -49,7 +49,6 @@ public class EnterpriceService {
 
         if(dbData.isPresent()){
             Enterprice e = dbData.get();
-            e.setId(enterprice.getId());
             e.setName(enterprice.getName());
             e.setDocument(enterprice.getDocument());
             e.setPhone(enterprice.getPhone());
