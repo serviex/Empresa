@@ -19,6 +19,7 @@ public class EmployeeController {
         this.serviceEnterprice=serviceEnterprice;
         this.service = service;
     }
+
     @GetMapping("/Employee")
     public List<Employee> getEmployees() {
 
@@ -29,6 +30,7 @@ public class EmployeeController {
         return this.service.getEmployee(id);
 
     }
+
     @PostMapping("/Employee")
     public Employee createEmployee(@RequestBody Employee employee) {
         return  this.service.createEmployee(employee);
