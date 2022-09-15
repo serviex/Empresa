@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 @Service
 public class EmployeeService {
@@ -23,6 +24,10 @@ public class EmployeeService {
     public Employee getEmployee(Long id){
         Optional<Employee> employee = this.employeeRepository.findById(id);
         return employee.orElse(null);
+    }
+    public Employee getEmployeeByEmail(String email){
+        Employee employee = this.employeeRepository.findByEmail(email);
+        return employee;
     }
     public Employee createEmployee(Employee employee){
         employee.setCreateAt(LocalDate.now());
