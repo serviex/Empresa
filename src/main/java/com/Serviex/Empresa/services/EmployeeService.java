@@ -26,7 +26,9 @@ public class EmployeeService {
         return employee.orElse(null);
     }
     public Employee getEmployeeByEmail(String email){
-        Employee employee = this.employeeRepository.findByEmail(email);
+        var e = this.employeeRepository.findByEmail(email);
+        System.out.println("set concept:"+ e.stream().findFirst());
+        Employee employee = e.stream().findFirst().get();
         return employee;
     }
     public Employee createEmployee(Employee employee){

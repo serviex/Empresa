@@ -4,7 +4,7 @@
 <div id="page" layout:fragment="content">
 
     <!-- Carousel Start -->
-    <div sec:authorize="!isAuthenticated()" class="container-fluid p-0 mb-5">
+    <div sec:authorize="!isAuthenticated()" th:hidden="${profile!=null}" class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -48,7 +48,7 @@
         </div>
     </div>
     <!-- Carousel End -->
-    <div sec:authorize="isAuthenticated()" class="container-fluid p-0 mb-5">
+    <div sec:authorize="isAuthenticated()" th:hidden="${profile==null}" class="container-fluid p-0 mb-5">
 
         <div class="text-center hero my-5" style="position: relative">
             <img class="d-block w-100" src="../img/papeleria.png"/>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
     </div>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
