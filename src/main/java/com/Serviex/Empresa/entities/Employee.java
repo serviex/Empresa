@@ -7,7 +7,9 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Data;
 @Entity
+@Data
 @Table(name = "employee")
 @JsonIgnoreProperties({"enterprice"})
 public class Employee {
