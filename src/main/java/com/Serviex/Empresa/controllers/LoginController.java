@@ -17,13 +17,11 @@ public class LoginController {
     @GetMapping("/")
     public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
         if(principal != null){
-            String email= (String) principal.getClaims().get("email");
-            var e= service.getEmployeeByEmail(email);
-            if(e != null && e.getEmail().equals(email))
+            var e= service.createEmployee(principal.getClaims());
+            if(e != null)
             {
                 model.addAttribute("profile", principal.getClaims());
             }
-
         }
         return "index";
     }

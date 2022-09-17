@@ -2,6 +2,7 @@ package com.Serviex.Empresa.services;
 
 import com.Serviex.Empresa.entities.Employee;
 import com.Serviex.Empresa.entities.Enterprice;
+import com.Serviex.Empresa.entities.Role;
 import com.Serviex.Empresa.entities.Transaction;
 import com.Serviex.Empresa.repositories.EmployeeRepository;
 import org.springframework.stereotype.Service;
@@ -25,10 +26,20 @@ public class EmployeeService {
         Optional<Employee> employee = this.employeeRepository.findById(id);
         return employee.orElse(null);
     }
-    public Employee getEmployeeByEmail(String email){
-        var e = this.employeeRepository.findByEmail(email);
-        System.out.println("set concept:"+ e.stream().findFirst());
-        Employee employee = e.stream().findFirst().get();
+    public Employee createEmployee(Map<String, Object> emp){
+        var e = this.employeeRepository.findByEmail(emp.get("email").toString());
+        Employee employee = new Employee();
+        if(e!= null && e.stream().count()> 0){
+            System.out.println("set concept:"+ e.stream().findFirst());
+            employee = e.stream().findFirst().get();
+        }
+        else{
+            employee.setEmail(emp.get("email").toString());
+            employee.setRole(Role.ADMINISTRADOR);
+            employee.setName(emp.get("name").toString());
+            employee.setCreateAt(LocalDate.now());
+            employee = this.employeeRepository.save(employee);
+        }
         return employee;
     }
     public Employee createEmployee(Employee employee){
