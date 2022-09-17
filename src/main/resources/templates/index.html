@@ -48,21 +48,33 @@
         </div>
     </div>
     <!-- Carousel End -->
-    <div sec:authorize="isAuthenticated()" class="container-fluid p-0 mb-5">
+    <div sec:authorize="isAuthenticated()"  class="container-fluid p-0 mb-5">
 
         <div class="text-center hero my-5" style="position: relative">
             <img class="d-block w-100" src="../img/papeleria.png"/>
             <div class="carousel-caption">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <h1 class="mb-4">Bienvenido</h1>
-                        <p>
-                            ingrese sus movimientos de gastos.
-                        </p>
-                    </div>
-                </div>
-            </div>
 
+                    <div class="card col-4" >
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black">Empleado</h5>
+                            <a th:href="@{/employee}">Ingresar</a>
+                        </div>
+                    </div>
+                    <div class="card col-4" >
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black">Empresa</h5>
+                            <a href="">Ingresar</a>
+                        </div>
+                    </div>
+                    <div class="card col-4">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black">Movimientos</h5>
+                            <a href="">Ingresar</a>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
     </div>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>

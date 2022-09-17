@@ -19,7 +19,11 @@ public class LoginController {
         if(principal != null){
             String email= (String) principal.getClaims().get("email");
             var e= service.getEmployeeByEmail(email);
-            System.out.println("set concept:"+ e.getName());
+            if(e != null && e.getEmail().equals(email))
+            {
+                model.addAttribute("profile", principal.getClaims());
+            }
+
         }
         return "index";
     }
