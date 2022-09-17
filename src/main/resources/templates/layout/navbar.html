@@ -34,7 +34,9 @@
             <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
                 <a href="index.html" class="nav-item nav-link active">inicio</a>
                 <a class="nav-item nav-link"  sec:authorize="!isAuthenticated()" th:href="@{/oauth2/authorization/auth0}">Ingrese Aqui</a>
+                <a class="nav-item nav-link"  sec:authorize="isAuthenticated()" th:href="@{/employee}">Empleado</a>
                 <a class="nav-item nav-link"  sec:authorize="isAuthenticated()" th:href="@{/logout}">Cerrar</a>
+
 
             </div>
 

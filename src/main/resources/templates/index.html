@@ -4,7 +4,7 @@
 <div id="page" layout:fragment="content">
 
     <!-- Carousel Start -->
-    <div sec:authorize="!isAuthenticated()" th:hidden="${profile!=null}" class="container-fluid p-0 mb-5">
+    <div sec:authorize="!isAuthenticated()" class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -48,19 +48,31 @@
         </div>
     </div>
     <!-- Carousel End -->
-    <div sec:authorize="isAuthenticated()" th:hidden="${profile==null}" class="container-fluid p-0 mb-5">
+    <div sec:authorize="isAuthenticated()"  class="container-fluid p-0 mb-5">
 
         <div class="text-center hero my-5" style="position: relative">
             <img class="d-block w-100" src="../img/papeleria.png"/>
             <div class="carousel-caption">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <h1 class="mb-4">Bienvenido</h1>
-                        <p>
-                            ingrese sus movimientos de gastos.
-                        </p>
+
+                    <div class="card col-4" >
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black">Empleado</h5>
+                            <a th:href="@{/employee}">Ingresar</a>
+                        </div>
                     </div>
-                </div>
+                    <div class="card col-4" >
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black">Empresa</h5>
+                            <a href="">Ingresar</a>
+                        </div>
+                    </div>
+                    <div class="card col-4">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: black">Movimientos</h5>
+                            <a href="">Ingresar</a>
+                        </div>
+                    </div>
+
             </div>
         </div>
     </div>

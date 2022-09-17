@@ -23,7 +23,7 @@ public class LoginController {
             {
                 model.addAttribute("profile", principal.getClaims());
             }
-            
+
         }
         return "index";
     }
