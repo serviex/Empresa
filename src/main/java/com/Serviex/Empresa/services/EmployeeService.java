@@ -30,7 +30,6 @@ public class EmployeeService {
         var e = this.employeeRepository.findByEmail(emp.get("email").toString());
         Employee employee = new Employee();
         if(e!= null && e.stream().count()> 0){
-            System.out.println("set concept:"+ e.stream().findFirst());
             employee = e.stream().findFirst().get();
         }
         else{

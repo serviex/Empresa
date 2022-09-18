@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{/default}" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+
+<div id="page" layout:fragment="content">
+  <div class="container-fluid p-0 mb-5" >
+
+    <div class="text-center hero my-5" style="position: relative">
+
+      <img class="d-block w-100" src="../img/papeleria.png"/>
+      <div class="carousel-caption">
+        <div class="row col-12 h-100">
+          <h2 style="color: white">Movimientos</h2>
+          <a th:href="@{/newTransaction}">Crear</a>
+          <table class="table h-100" style="color: white">
+            <thead  style="height: 10%">
+            <tr>
+              <th>Concepto</th>
+              <th>Valor</th>
+              <th>Fecha</th>
+
+            </tr>
+            </thead>
+            <tbody style="height: 90%">
+            <tr  th:each="emp: ${transactions}">
+              <td th:text="${emp.getConcept()}"></td>
+              <td th:text="${emp.getAmount()}"></td>
+              <td th:text="${emp.getCreateAt()}"></td>
+
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>

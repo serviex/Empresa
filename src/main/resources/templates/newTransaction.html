@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{/default}" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+
+<div id="page" layout:fragment="content">
+  <div class="container-fluid p-0 mb-5" >
+
+    <div class="text-center hero my-5" style="position: relative">
+
+      <img class="d-block w-100" src="../img/papeleria.png"/>
+      <div class="carousel-caption">
+        <div class="row col-12 h-100">
+          <h2 style="color: white">Movimientos</h2>
+          <form th:action="@{/addTransaction}" th:object="${transaction}" th:method="POST">
+            <table class="table" style="color: white">
+              <tr>
+                <td>
+                  Concepto
+                </td>
+                <td>
+                  <input type="text" class="form-control" th:field="*{concept}" th:value="*{concept}" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Valor
+                </td>
+                <td>
+                  <input type="number" class="form-control" th:field="*{amount}" th:value="*{amount}"  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Empresa
+                </td>
+                <td>
+
+                  <select class="form-control"  th:field="*{idEnterprice}">
+                    <option th:each="i : ${enterprice}" th:value="${i.getId()}" th:text="${i.getName()}">
+                    </option>
+
+                  </select>
+
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:center">
+                  <input type="submit" value="Guardar"/>
+
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
