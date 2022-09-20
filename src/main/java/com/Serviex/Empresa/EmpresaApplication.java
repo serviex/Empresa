@@ -8,9 +8,12 @@ import com.Serviex.Empresa.entities.Role;
 import com.Serviex.Empresa.entities.Transaction;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class EmpresaApplication {
+
+public class EmpresaApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EmpresaApplication.class, args);

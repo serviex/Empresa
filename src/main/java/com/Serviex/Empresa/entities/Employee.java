@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
 @Entity
 @Table(name = "employee")
 @JsonIgnoreProperties({"enterprice"})
@@ -15,13 +16,19 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "employee_id")
     private Long id;
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
     @Column(name = "name")
     private String name;
     @Enumerated(EnumType.STRING)
     @Column(name="role")
     private Role role;
+
+    @Column(name = "image")
+    private String image;
+
+    @Column(name = "auth0Id")
+    private String auth0Id;
     @ManyToOne(fetch = FetchType.LAZY,
             targetEntity = Enterprice.class)
     @JoinColumn(name = "enterprice_id")

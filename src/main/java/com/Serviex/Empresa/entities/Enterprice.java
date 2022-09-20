@@ -1,10 +1,13 @@
 package com.Serviex.Empresa.entities;
 
+
+
 import java.time.LocalDate;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
+
 @Table(name = "enterprice")
 public class Enterprice {
     //ATRIBUTOS
@@ -12,9 +15,9 @@ public class Enterprice {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "enterprice_id")
     private Long id;
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
-    @Column(name = "document")
+    @Column(name = "document", unique = true)
     private String document;
     @Column(name = "phone")
     private String phone;

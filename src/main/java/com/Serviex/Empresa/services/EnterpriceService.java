@@ -33,9 +33,9 @@ public class EnterpriceService {
 
     public Enterprice createTransaction(Transaction transaction,long idEnterprice){
         Enterprice enterprice = this.getEnterprice(idEnterprice);
-        var employees =enterprice.getEmployees().stream().findFirst();
+        Optional<Employee> employees =enterprice.getEmployees().stream().findFirst();
         if(employees.isPresent()) {
-            var employee = employees.get();
+            Employee employee = employees.get();
             employee.setCreateAt(LocalDate.now());
             employee.addTransaction(transaction);
         }
