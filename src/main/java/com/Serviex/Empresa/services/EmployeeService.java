@@ -27,7 +27,7 @@ public class EmployeeService {
         return employee.orElse(null);
     }
     public Employee createEmployee(Map<String, Object> emp){
-        var e = this.employeeRepository.findByEmail(emp.get("email").toString());
+        List<Employee> e = this.employeeRepository.findByEmail(emp.get("email").toString());
         Employee employee = new Employee();
         if(e!= null && e.stream().count()> 0){
             employee = e.stream().findFirst().get();

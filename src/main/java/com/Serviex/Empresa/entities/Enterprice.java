@@ -1,13 +1,13 @@
 package com.Serviex.Empresa.entities;
 
-import lombok.Data;
+
 
 import java.time.LocalDate;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 @Entity
-@Data
+
 @Table(name = "enterprice")
 public class Enterprice {
     //ATRIBUTOS
