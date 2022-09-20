@@ -10,7 +10,15 @@
       <div class="carousel-caption">
         <div class="row col-12 h-100">
           <h2 style="color: white">Movimientos</h2>
-          <a th:href="@{newTransaction}">Crear</a>
+          <div class="col-6" style="color: white">
+            <label>TOTAL: </label>
+            <label th:text="${total}"></label>
+          </div>
+          <div class="col-6">
+            <a th:href="@{newTransaction}">Crear</a>
+          </div>
+
+
           <table class="table h-100" style="color: white">
             <thead  style="height: 10%">
             <tr>
