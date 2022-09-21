@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class EmployeeController {
-    EmployeeService service;
+    private EmployeeService service;
     private EnterpriceService serviceEnterprice;
     EmployeeController(EmployeeService service, EnterpriceService serviceEnterprice)
     {

@@ -1,14 +1,14 @@
 package com.Serviex.Empresa.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
+
 
 import java.time.LocalDate;
 import java.time.LocalDate;
 import javax.persistence.*;
 import java.util.List;
 @Entity
-@Data
+
 @Table(name = "transaction")
 @JsonIgnoreProperties({"employee","entreprice"})
 public class Transaction {

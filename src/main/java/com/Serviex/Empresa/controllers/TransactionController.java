@@ -34,7 +34,12 @@ public class TransactionController {
 
         List<Transaction> transactions= this.service.getTransactions();
         model.addAttribute("transactions", transactions);
-
+        float total=0;
+        for (int i=0; i< transactions.stream().count(); i++)
+        {
+            total =total +transactions.get(i).getAmount();
+        }
+        model.addAttribute("total", total);
         return modelAndView;
     }
     @GetMapping("/newTransaction")
@@ -58,8 +63,8 @@ public class TransactionController {
         transaction1.setConcept(transaction.getConcept());
         transaction1.setAmount(transaction.getAmount());
         if(transaction.getIdEnterprice()> 0){
-            var e = this.enterpriceService.getEnterprice(transaction.getIdEnterprice());
-            transaction1.setEntreprice(e);
+            Enterprice e = this.enterpriceService.getEnterprice(transaction.getIdEnterprice());
+            transaction1.setEnterprice(e);
         }
 
         this.service.createTransaction(transaction1);
@@ -69,6 +74,12 @@ public class TransactionController {
 
         List<Transaction> transactions= this.service.getTransactions();
         model.addAttribute("transactions", transactions);
+        float total=0;
+        for (int i=0; i< transactions.stream().count(); i++)
+        {
+            total =total +transactions.get(i).getAmount();
+        }
+        model.addAttribute("total", total);
         return modelAndView;
     }
     @PutMapping("/Transaction/{id}")
