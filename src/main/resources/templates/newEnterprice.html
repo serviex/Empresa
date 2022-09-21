@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+
+<div id="page" layout:fragment="content">
+  <div class="container-fluid p-0 mb-5" >
+
+    <div class="text-center hero my-5" style="position: relative">
+
+      <img class="d-block w-100" src="../img/papeleria.png"/>
+      <div class="carousel-caption">
+        <div class="row col-12 h-100">
+          <h2 style="color: white">Movimientos</h2>
+          <form th:action="@{addEnterprice}" th:object="${enterprice}" th:method="POST">
+            <table class="table" style="color: white">
+              <tr>
+                <td>
+                  Nombre
+                </td>
+                <td>
+                  <input type="text" class="form-control" th:field="*{name}" th:value="*{name}" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Identificacion
+                </td>
+                <td>
+                  <input type="number" class="form-control" th:field="*{document}" th:value="*{document}"  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Telefono
+                </td>
+                <td>
+                  <input type="number" class="form-control" th:field="*{phone}" th:value="*{phone}"  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Direccion
+                </td>
+                <td>
+                  <input type="text" class="form-control" th:field="*{address}" th:value="*{address}" />
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2" style="text-align:center">
+                  <input type="submit" value="Guardar"/>
+
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
